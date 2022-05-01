@@ -1,0 +1,12 @@
+# VUnit tests
+
+name: VUnit Tests
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: VUnit/vunit_action@master
+      with:
+        cmd: tests/run.py
